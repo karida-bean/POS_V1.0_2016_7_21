@@ -134,12 +134,10 @@ let proMoney = calculateProMoney(subTotals);
     console.log(proMoney)
 
 function printPreceipt(tags) {
-    let returnString = '';
     for(let subTotal of subTotals) {
-        returnString += '名称：' + subTotal.name + '，数量：' + subTotal.amount + '瓶，单价：' +
-            subTotal.price + '（元），小计：' + subTotal.subTotal + '（元）';
+        console.log( '名称：' + subTotal.name + '，数量：' + subTotal.amount + '瓶，单价：' +
+            subTotal.price + '（元），小计：' + subTotal.subTotal + '（元）'
+    )
     }
-    returnString += '，总计：' + total + '（元），节省：' + proMoney + '（元）'
-    console.log(returnString);
-    return returnString;
+    console.log( '总计：' + total + '（元），节省：' + proMoney + '（元）')
 }
